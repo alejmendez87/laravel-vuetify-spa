@@ -35,7 +35,6 @@
               color="primary"
               type="checkbox"
               v-model="remember"
-              value="true"
             ></v-checkbox>
 
             <submit-button :block="true" :form="form" :label="$t('login')"></submit-button>
@@ -67,7 +66,8 @@ export default {
   data: () => ({
     form: new Form({
       email: '',
-      password: ''
+      password: '',
+      remember: 'false'
     }),
     eye: true,
     remember: false,
